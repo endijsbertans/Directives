@@ -1,0 +1,13 @@
+<main>
+  <app-learning-resources/>
+
+  <hr />
+
+  <app-auth/>
+<!--  @if(isAdmin()){-->
+<!--    <p> Only admins see this </p>-->
+<!--  }-->
+  <p *appAuth="'admin'" class="protected-content admin"> Only admins see this!</p>
+  <p *appAuth="'user'" class="protected-content unauthenticated"> Only users see this!</p>
+  <p *appAuth="'guest'" class="protected-content authenticated"> Only guests see this!</p>
+</main>
